@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Comp1(props) {
   const [val, setVal] = useState("");
+  useEffect(()=>{
+    console.log("use Effect in comp1 is invoked" ,val);
+  },[val])
   return (
     <>
       <div>This is my first component</div>
